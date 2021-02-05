@@ -139,11 +139,11 @@
 section{
     padding: 100px 0;
 }
-.about{
+.about, .skills{
     font-family: Helvetica, sans-serif;
 }
 
-.about .title{
+section .title{
     position: relative;
     text-align: center;
     font-size: 45px;
@@ -154,7 +154,7 @@ section{
     color: rgb(17, 74, 97) ;
 }
 
-.about .title:before{
+section .title:before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -176,7 +176,8 @@ section{
     background: #ffffff;
     transform: translateX(-50%);
 }
-.about .about-content{
+
+.about .about-content, .skills .skills-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -202,8 +203,6 @@ section{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
-
-
 }
 
 .about .about-content .right .text span{
@@ -212,6 +211,8 @@ section{
 
 .about .about-content .right p{
     text-align: justify;
+    font-size: 20px;
+
 }
 
 .about .about-content .right a{
@@ -230,7 +231,96 @@ section{
     background: none;
 }
 
+/* Skills section styling */
 
+.skills .title::after{
+    content: " what I Know";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    font-size: 20px;
+    color:crimson; 
+    padding: 5px;
+    background: #ffffff;
+    transform: translateX(-50%);
+}
+
+.skills .skills-content .column{
+    width: calc(55% - 150px);
+}
+.skills .skills-content .right{
+    width: 50%;
+}
+.skills .skills-content .left{
+    text-align: justify;
+    font-size: 20px;
+}
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top:0;
+    background: crimson;
+}
+
+.skills-content .right .python::before{
+    width: 80%;
+}
+.skills-content .right .matlab::before{
+    width: 70%;
+}
+.skills-content .right .C::before{
+    width: 65%;
+}
+.skills-content .right .html::before{
+    width: 70%;
+}
+.skills-content .right .Js::before{
+    width: 60%;
+}
+.skills-content .right .SQL::before{
+    width: 65%;
+}
+
+.skills .skills-content .left a{
+    display: inline-block;
+    background:crimson;
+    color: white;
+    font-size: 20px;
+    padding: 10px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.skills .skills-content .left a:hover{
+    color: crimson;
+    background: none;
+}
 
 
 
