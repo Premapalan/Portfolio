@@ -5,6 +5,16 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+.max-width{
+    max-width: 1800px;
+    padding: 0 80px; 
+    margin: auto;
+
+}
 /*navbar styling*/
 .navbar{
     position: fixed;
@@ -19,12 +29,7 @@
     background:rgb(17, 74, 97) ;
 }
 
-.max-width{
-    max-width: 1900px;
-    padding: 0 80px; 
-    margin: auto;
 
-}
 
 .navbar .max-width{
     display: flex;
@@ -53,6 +58,7 @@
 }
 
 .navbar .menu li a{
+    display: block;
     color: crimson;
     font-size: 19px;
     font-weight: 600;
@@ -86,7 +92,30 @@
 .menu-btn i.active:before{
     content:"\f00d";
 }
-
+ /* scroll button styling */
+ .scroll-up-btn{
+     position: fixed;
+     height: 45px;
+     width: 45px;
+     background: crimson;
+     right: 30px;
+     bottom: 10px;
+     text-align: center;
+     line-height: 45px;
+     color: white;
+     z-index: 9999;
+     font-size: 30px;
+     border-radius: 10px;
+     cursor: pointer;
+     opacity: 0;
+     pointer-events: none;
+     transition: all 0.3s ease;
+ }
+ .scroll-up-btn.show{
+     bottom: 30px;
+     opacity: 1;
+     pointer-events: auto;
+ }
 
 /* home styling */
 .home{
@@ -371,8 +400,8 @@ section .title::after{
 .experiences .title::after{
     content: "what I gained";
 }
-.experiences .experiences-content .card{
-    width: calc(25% - 20px);
+.experiences .experiences-content .carousel .card{
+    /* width: calc(25% - 20px); */
     text-align: center;
     background: rgb(17, 74, 97);
     border-radius: 20px;
@@ -382,7 +411,7 @@ section .title::after{
     
 }
 
-.experiences .experiences-content .card i{
+.experiences .experiences-content .carousel .card i{
     font-size: 100px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -390,7 +419,7 @@ section .title::after{
     transition: color 0.3s ease;
 }
 
-.experiences .experiences-content .card .text{
+.experiences .experiences-content .carousel .card .text{
     font-size: 25px;
     font-weight: 600;
     color: antiquewhite;
@@ -398,25 +427,47 @@ section .title::after{
 
 }
 
-.experiences .experiences-content .card:hover{
+.experiences .experiences-content .carousel .card:hover{
     background: crimson;
 }
-.experiences .experiences-content .card:hover i{
+.experiences .experiences-content .carousel .card:hover i{
     color:rgb(17, 74, 97);
 }
 
-.experiences .experiences-content .card .box{
+.experiences .experiences-content .carousel .card .box{
     transition: all 0.3s ease;
 }
 
-.experiences .experiences-content .card:hover .box{
+.experiences .experiences-content .carousel .card:hover .box{
     transform: scale(1.05);
 }
 
-.experiences .experiences-content .card p{
+.experiences .experiences-content .carousel .card p{
     color: antiquewhite;
 }
 
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3s ease;
+
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson!important;
+}
 /* contact section styling */
 .contact .title::after{
     content: "get in touch";
