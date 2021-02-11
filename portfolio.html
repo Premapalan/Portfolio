@@ -26,6 +26,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+        <!--adding vanilla tilt script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     </head>
 
     <body>
@@ -42,7 +45,6 @@
                     <li><a href="#skills" class="menu-btn">Skills</a></li>
                     <li><a href="#experiences" class="menu-btn">Experience</a></li>
                     <li><a href="#projects" class="menu-btn">Projects</a></li>
-                    <li><a href="#testimonial" class="menu-btn">Testimonial</a></li>
                     <li><a href="#contact" class="menu-btn">Contact</a></li>
                 </ul>
                 <div class="menu-btn">
@@ -77,7 +79,7 @@
                     <div class="column right">
                         <div class="text">I'm Prasath and I'm a <span class="typing2"></span></div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias fugiat porro eum laboriosam veritatis cum deserunt numquam itaque doloribus, eveniet, error est eaque commodi reprehenderit temporibus. Debitis, necessitatibus unde explicabo assumenda aspernatur accusantium adipisci neque distinctio odio voluptatum ipsam similique architecto accusamus maiores error tempora nihil culpa fugit repellendus animi! Alias quas corporis exercitationem, quos nam quasi? Aperiam explicabo alias delectus ducimus dolorem libero possimus earum voluptate praesentium, soluta atque eligendi vero harum aspernatur neque sapiente. Aspernatur, non natus libero dolorum quia earum repellat deleniti quod, mollitia provident, rem illum quas quaerat. Aspernatur quibusdam totam excepturi sint omnis, corrupti at quisquam saepe sed quidem accusantium ullam magnam voluptatem placeat harum fugiat perspiciatis sapiente laudantium eos deserunt nihil distinctio veniam fuga! Officia distinctio obcaecati debitis, voluptatum, sapiente quia inventore, quas et possimus quod maxime optio sint dolorum veritatis autem. Vitae non expedita dolor nesciunt reiciendis officiis, aliquid fugiat quos nisi quasi ab ratione necessitatibus, magni deserunt hic. Quasi nisi sint aperiam est minima incidunt. Laboriosam maiores nihil reprehenderit sint saepe explicabo nesciunt odit velit pariatur. Totam doloribus repellat soluta explicabo nihil voluptatem enim tenetur eos, illum corporis hic. Eveniet, quas, assumenda exercitationem sapiente sit sequi distinctio amet eaque voluptatibus provident aspernatur!</p>
-                        <a href="#">Download CV</a>
+                        <a href="Prasath Premapalan Resume English 2021.pdf" download="updatedCV">Download CV</a>
                     </div>
                 </div>
             </div>
@@ -246,23 +248,23 @@
                     </div>
                     <div class="column right">
                         <div class="text">Message me</div>
-                        <form action="#">
+                        <form action="" id="post_id" method="POST" enctype="multipart/form-data" name="EmailForm">
                             <div class="fields">
-                                <div class="field name">
+                                <div class="field name">  
                                     <input type="text" placeholder="Name" required>
                                 </div>
                                 <div class="field email">
-                                    <input type="email" placeholder="xxx@email.com" required>
+                                    <input type="email" id="email_id" placeholder="xxx@email.com" required>
                                 </div>
                             </div>
                             <div class="field">
-                                <input type="text" placeholder="Subject" required>
+                                <input type="text" id="sub_id" placeholder="Subject" required>
                             </div>
                             <div class="field textarea">
-                                <textarea name="" id="" cols="30" rows="10" required></textarea>
+                                <textarea name="" id="content_id" cols="30" rows="10" required></textarea>
                             </div>
                             <div class="button">
-                                <button type="submit">Send message</button>
+                                <button type="submit" id="sendbutton_id" value="click">Send message</button>
                             </div>
                         </form>
                     </div>
@@ -271,6 +273,7 @@
             </div>
         </section>
         <!--end Contact-->
+        
         <!--footer section-->
         <footer>
             <span>Created by <span class="creator"> Prasath Premapalan</span> | <span class="far fa-copyright"></span> 2021 All rights reserved</span>
@@ -285,6 +288,12 @@
 
         <!--Custom JavaScript-->
         <script src="JS/portfolio.js"></script>
+        <script>
+            VanillaTilt.init(document.querySelectorAll(".experiences .card"),{
+                max: 25,
+                speed: 400
+            });
+        </script>
     </body>
 
 

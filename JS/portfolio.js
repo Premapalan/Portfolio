@@ -15,6 +15,14 @@ $(document).ready(function(){
         }
     });
 
+    //email or message
+    $('#sendbutton_id').click(function() {
+        $('#post_id').attr('action',
+                       'mailto:pprasathpp@gmail.com?subject=' +
+                       $('#sub_id').val() + '&body=' + $('#content_id').val());
+        $('#post_id').submit();
+    });
+
     //slide up script
     $('.scroll-up-btn').click(function(){
         $('html').animate({scrollTop: 0});
